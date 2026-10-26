@@ -16,7 +16,7 @@ public class EjecutaValidaArgumentos {
 
     public static void validaArgumentos(String... argumentos) {
         // creo el proceso con la ruta de salida
-        ProcessBuilder pb = new ProcessBuilder("java", "-cp", "build/classes/java/main", "ejercicio1.ValidaArgumentos");
+        ProcessBuilder pb = new ProcessBuilder("java", "-cp", System.getProperty("java.class.path"), "ejercicio1.ValidaArgumentos");
         // se añaden argumentos como una lista
         pb.command().addAll(java.util.Arrays.asList(argumentos));
 
